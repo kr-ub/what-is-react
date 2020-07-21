@@ -39,7 +39,8 @@
       crossorigin
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
     ></script>
-    <script type="text/javascript">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script type="text/babel">
       //   // react 라이브러리가 하는 일
       //   const component = {
       //     children: "init",
@@ -48,13 +49,12 @@
       //       return `<p>${this.children} : ${this.count}</p>`;
       //     }
       //   };
+      const Component2 = (props) => {
+        <p>안녕하세요</p>;
+      };
 
-      const Component = props => {
-        return React.createElement(
-          'p',
-          null,
-          `${props.message} ${props.count}`,
-        );
+      const Component = (props) => {
+        return React.createElement('p', null, `안녕하세요`);
       };
       //   // react-dom 라이브러리가 하는 일
       //   function render(dom, component) {
